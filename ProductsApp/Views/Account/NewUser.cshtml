@@ -1,0 +1,67 @@
+﻿@model vmSignUp
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewUser</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js" type="text/javascript" ></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">First Name</label>
+                        <input type="text" asp-for="signUp.FirstName" class="form-control" placeholder="First Name">
+                        <span asp-validation-for="signUp.FirstName"></span>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" asp-for="signUp.LastName" class="form-control" placeholder="Last Name">
+                        <span asp-validation-for="signUp.LastName"></span>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" asp-for="signUp.Username" class="form-control" placeholder="Username">
+                        <span asp-validation-for="signUp.Username"></span>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" asp-for="signUp.Email" class="form-control" placeholder="Email">
+                        <span asp-validation-for="signUp.Email"></span>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" asp-for="signUp.Password" class="form-control" placeholder="Password">
+                        <span asp-validation-for="signUp.Password"></span>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <label class="form-label">Role</label>
+                        <select class="form-select" asp-for="signUp.RoleName">
+                            @foreach(RoleDTO item in Model.roles)
+                            {
+                                <option value="@item.Name">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3 ms-3">
+                        <input type="submit" value="Create Account" asp-action="CreateAccount" class="btn btn-primary" />
+                    </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

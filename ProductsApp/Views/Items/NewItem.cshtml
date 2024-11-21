@@ -1,0 +1,63 @@
+﻿@model vmItem
+@{
+    ViewData["Title"] = "NewItem";
+    Layout = "~/Views/Shared/_SideMenu.cshtml";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="item.Id" class="form-control">
+    <input type="hidden" asp-for="item.Warehouse_Id" class="form-control">
+
+<div class="mb-3 ms-3">
+    <label class="form-label">Name</label>
+    <input type="text" asp-for="item.Name" class="form-control" placeholder="Item Name">
+    <span asp-validation-for="item.Name"></span>
+</div>
+
+<div class="mb-3 ms-3">
+    <label class="form-label">KU_Code</label>
+    <input type="text" asp-for="item.KU_Code" class="form-control" placeholder="Item KU_Code">
+    <span asp-validation-for="item.KU_Code"></span>
+</div>
+
+<div class="mb-3 ms-3">
+    <label class="form-label">Qty</label>
+    <input type="text" asp-for="item.Qty" class="form-control" placeholder="Item Qty">
+    <span asp-validation-for="item.Qty"></span>
+</div>
+
+<div class="mb-3 ms-3">
+    <label class="form-label">Cost Price</label>
+    <input type="text" asp-for="item.CostPrice" class="form-control" placeholder="Item Cost Price">
+    <span asp-validation-for="item.CostPrice"></span>
+</div>
+
+<div class="mb-3 ms-3">
+    <label class="form-label">MSRP Price</label>
+    <input type="text" asp-for="item.MSRP_Price" class="form-control" placeholder="Item MSRP Price">
+    <span asp-validation-for="item.MSRP_Price"></span>
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Warehouse</label>
+    <select class="form-select" asp-for="item.Warehouse_Id">
+        @foreach (WarehouseDTO item in Model.warehouses)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+    <span asp-validation-for="item.Warehouse_Id"></span>
+</div>
+
+    <div class="mb-3">
+        @if ((bool)ViewData["IsEdit"] == false)
+        {
+            <input type="submit" value="Save" asp-action="Save" class="btn btn-primary" />
+        }
+        else
+        {
+            <input type="submit" value="Update" asp-action="Update" class="btn btn-primary" />
+        }
+    </div>
+</form>

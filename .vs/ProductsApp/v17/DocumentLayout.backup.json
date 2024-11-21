@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\inetpub\\wwwroot\\ProductsApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|c:\\inetpub\\wwwroot\\productsapp\\productsapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|solutionrelative:productsapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|c:\\inetpub\\wwwroot\\productsapp\\productsapp\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|solutionrelative:productsapp\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|c:\\inetpub\\wwwroot\\productsapp\\productsapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|solutionrelative:productsapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|c:\\inetpub\\wwwroot\\productsapp\\productsapp\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|solutionrelative:productsapp\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|c:\\inetpub\\wwwroot\\productsapp\\productsapp\\data\\productscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535246D5-2ACA-4ECD-99EA-7D0B9DEE5625}|ProductsApp\\ProductsApp.csproj|solutionrelative:productsapp\\data\\productscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ProductsApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ProductsApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:21:17.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "ProductsApp\\Controllers\\CountryController.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "ProductsApp\\Controllers\\CountryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:20:56.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "ProductsApp\\Services\\AccountService.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Services\\AccountService.cs",
+              "RelativeToolTip": "ProductsApp\\Services\\AccountService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwBkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T00:01:55.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ProductsApp\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ProductsApp\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T22:30:37.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsContext.cs",
+              "DocumentMoniker": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Data\\ProductsContext.cs",
+              "RelativeDocumentMoniker": "ProductsApp\\Data\\ProductsContext.cs",
+              "ToolTip": "C:\\inetpub\\wwwroot\\ProductsApp\\ProductsApp\\Data\\ProductsContext.cs",
+              "RelativeToolTip": "ProductsApp\\Data\\ProductsContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T22:26:42.824Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

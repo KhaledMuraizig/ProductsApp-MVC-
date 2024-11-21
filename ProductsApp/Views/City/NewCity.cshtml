@@ -1,0 +1,37 @@
+﻿@model vmCity
+@{
+    ViewData["Title"] = "NewCity";
+    Layout = "~/Views/Shared/_SideMenu.cshtml";
+}
+
+<form method="post">
+    
+    <input type="hidden" asp-for="City.Id" class="form-control" placeholder="Country Id">
+    
+
+    <div class="mb-3 ms-3">
+        <label class="form-label">Name</label>
+        <input type="text" asp-for="City.Name" class="form-control" placeholder="City Name">
+        <span asp-validation-for="City.Name"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Country</label>
+        <select class="form-select" asp-for="City.Country_Id">
+            @foreach (CountryDTO item in Model.countries)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="City.Country_Id"></span>
+    </div>
+    <div class="mb-3">
+            @if ((bool)ViewData["IsEdit"] == false)
+            {
+            <input type="submit" value="Save" asp-action="Save" class="btn btn-primary" />
+            }
+            else
+            {
+            <input type="submit" value="Update" asp-action="Update" class="btn btn-primary" />
+            }
+            </div>
+</form>

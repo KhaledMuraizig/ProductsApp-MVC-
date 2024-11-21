@@ -1,0 +1,51 @@
+﻿@model vmWarehouse
+@{
+    ViewData["Title"] = "NewWarehouse";
+    Layout = "~/Views/Shared/_SideMenu.cshtml";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="warehouse.Id" class="form-control">
+    <div class="mb-3 ms-3">
+        <label class="form-label">Name</label>
+        <input type="text" asp-for="warehouse.Name" class="form-control" placeholder="Warehouse Name">
+        <span asp-validation-for="warehouse.Name"></span>
+    </div>
+    <div class="mb-3 ms-3">
+        <label class="form-label">Description</label>
+        <input type="text" asp-for="warehouse.Description" class="form-control" placeholder="Warehouse Description">
+        <span asp-validation-for="warehouse.Description"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Country</label>
+        <select class="form-select" asp-for="warehouse.Country_Id">
+            @foreach (CountryDTO item in Model.countries)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="warehouse.Country_Id"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">City</label>
+        <select class="form-select" asp-for="warehouse.City_Id">
+            @foreach (CityDTO item in Model.cities)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="warehouse.City_Id"></span>
+    </div>
+    <div class="mb-3">
+        @if ((bool)ViewData["IsEdit"] == false)
+        {
+            <input type="submit" value="Save" asp-action="Save" class="btn btn-primary" />
+        }
+        else
+        {
+            <input type="submit" value="Update" asp-action="Update" class="btn btn-primary" />
+        }
+    </div>
+
+</form>

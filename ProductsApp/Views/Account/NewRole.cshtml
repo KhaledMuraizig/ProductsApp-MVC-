@@ -1,0 +1,17 @@
+﻿@model RoleDTO
+@{
+    ViewData["Title"] = "NewRole";
+    Layout = "~/Views/Shared/_SideMenu.cshtml";
+}
+
+<h1>NewRole</h1>
+
+<form  method="post">
+    <div class="mb-3 ms-3">
+        <label class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" placeholder="Name">
+    </div>
+    <div class="mb-3 ms-3">
+        <input type="submit" value="Save" asp-action="AddRole" class="btn btn-primary" />
+    </div>
+</form>

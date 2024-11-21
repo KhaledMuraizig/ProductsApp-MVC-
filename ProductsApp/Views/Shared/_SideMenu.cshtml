@@ -1,0 +1,115 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ProductsApp.Data
+@inject SignInManager<User> signInManager;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_sideMenu</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js" type="text/javascript" ></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+
+    <style>
+
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1rem;
+            height: 100vh;
+        }
+
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/sidebars.css" rel="stylesheet">
+</head>
+<body>
+    <main class="d-flex flex-nowrap">
+
+
+
+        <div class="flex-shrink-0 p-3" style="width: 280px;">
+            <a asp-controller="Account" asp-action="Welcome" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+
+                <span class="fs-5 fw-semibold">Home</span>
+            </a>
+            <a asp-controller="Account" asp-action="Logout" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+
+                <span class="fs-5 fw-semibold">Logout</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                @if (User.IsInRole("manager"))
+                {
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            Settings
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a asp-controller="Country" asp-action="Index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Country</a></li>
+                                <li><a asp-controller="City" asp-action="Index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New City</a></li>
+                                <li><a asp-controller="Country" asp-action="CountryList" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Country List</a></li>
+                                <li><a asp-controller="City" asp-action="CityList" class="link-body-emphasis d-inline-flex text-decoration-none rounded">City List</a></li>
+                                <li><a asp-controller="Account" asp-action="Index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Add User</a></li>
+                                <li><a asp-controller="Account" asp-action="NewRole" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Role</a></li>
+                                <li><a asp-controller="Account" asp-action="RolesList" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Role List</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                }
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        Warehouse
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            @if (User.IsInRole("manager"))
+                            {
+                            <li><a asp-controller="Warehouse" asp-action="Index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Warehouse</a></li>
+                            <li><a asp-controller="Warehouse" asp-action="WarehouseList" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Warehouse List</a></li>
+                            }
+                            @if (User.IsInRole("employee"))
+                            {
+                            <li><a asp-controller="Items" asp-action="Index" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Item</a></li>
+                            <li><a asp-controller="Items" asp-action="ItemsList" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Items List</a></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="b-example-divider b-example-vr">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>
